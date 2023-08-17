@@ -1,9 +1,24 @@
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from '../../../firebase.init';
 
 
 const Login = () => {
 
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
     const loginHandler = () => {
-        console.log("Login Button Clicked");
+
+        signInWithPopup(auth, provider)
+
+        .then( result => {
+            const user = result.user;
+            console.log(user);
+        })
+
+        .catch( error => {
+            console.log('Error', error.message);
+        })
     }
 
     return (
