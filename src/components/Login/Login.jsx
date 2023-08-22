@@ -55,14 +55,24 @@ const Login = () => {
 
     return (
         <div>
-            <h3>Login Page</h3>
             <br /><br />
+            <div className="text-center">
+                <form className="[&>*]:border [&>*]:my-2 [&>*]:rounded-2xl [&>*]:p-2 bg-yellow-400 p-5 w-6/12 mx-auto rounded-2xl">
+                    <input type="email" name="email" placeholder="Type Email" />
+                    <br />
+                    <input type="password" name="password" placeholder="Type Password" />
+                    <br />
+                    <button className="px-5 py-2 font-semibold text-white bg-blue-950" type="submit">Login</button>
+                    <button className="px-5 py-2 ml-2 font-semibold text-white bg-blue-950" type="button">Reset</button>
+                </form>
+            </div>
+            <br />
             <div className="text-center">
                 { user ?
                     <button className="px-5 py-2 bg-yellow-400 rounded-md" onClick={logoutHandler}>Logout</button> :
-                    <div>
-                        <button className="px-5 py-2 bg-yellow-400 rounded-md" onClick={googleLoginHandler}>Google Login</button>
-                        <button className="px-5 py-2 bg-yellow-400 rounded-md" onClick={githubLoginHandler}>Github Login</button>
+                    <div className="[&>*]:mx-2">
+                        <button className="px-5 py-2 font-semibold text-white rounded-md bg-blue-950" onClick={googleLoginHandler}>Google Login</button>
+                        <button className="px-5 py-2 font-semibold text-white rounded-md bg-blue-950" onClick={githubLoginHandler}>Github Login</button>
                     </div>
                 }
             </div>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Registration = () => {
@@ -11,6 +12,8 @@ const Registration = () => {
                     <input type="email" name="email" placeholder="Type Email" />
                     <br />
                     <input type="password" name="password" placeholder="Type Password" />
+                    <br />
+                    <button className="px-5 py-2 font-semibold text-white bg-blue-950" type="submit">Registration</button>
                 </form>
             </div>
         </div>
