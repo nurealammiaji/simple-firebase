@@ -62,8 +62,8 @@ const Login = () => {
                     <br />
                     <input type="password" name="password" placeholder="Type Password" />
                     <br />
-                    <button className="px-5 py-2 font-semibold text-white bg-blue-950" type="submit">Login</button>
-                    <button className="px-5 py-2 ml-2 font-semibold text-white bg-blue-950" type="button">Reset</button>
+                    <button className="px-5 py-2 font-semibold text-white border-none bg-blue-950" type="submit">Login</button>
+                    <button className="px-5 py-2 ml-2 font-semibold text-white border-none bg-blue-950" type="button">Reset</button>
                 </form>
             </div>
             <br />
